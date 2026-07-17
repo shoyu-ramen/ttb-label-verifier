@@ -1,7 +1,7 @@
 import type { VerifyResponse } from './types'
 
 /** Worker URL. Set VITE_API_URL at build time; falls back to local wrangler dev. */
-const API_URL = (import.meta.env.VITE_API_URL as string | undefined) ?? 'http://localhost:8788'
+const API_URL = (import.meta.env.VITE_API_URL as string | undefined) || 'http://localhost:8788'
 
 export class ApiError extends Error {}
 
