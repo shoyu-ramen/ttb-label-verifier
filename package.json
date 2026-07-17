@@ -1,0 +1,21 @@
+{
+  "name": "ttb-label-verifier",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AI-powered alcohol label verification prototype for TTB compliance review",
+  "workspaces": [
+    "web",
+    "worker"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace web",
+    "dev:worker": "npm run dev --workspace worker",
+    "build": "npm run build --workspace web",
+    "test": "npm run test --workspace web",
+    "samples": "node scripts/make-samples.mjs",
+    "deploy:worker": "npm run deploy --workspace worker"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.2"
+  }
+}

@@ -1,0 +1,6 @@
+name = "ttb-label-verifier"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+
+# Secrets (set with `wrangler secret put`):
+#   ANTHROPIC_API_KEY

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "old-tom-compliant",
+    "title": "Old Tom Bourbon — fully compliant",
+    "file": "old-tom-compliant.png",
+    "expect": "PASS",
+    "description": "Everything on the label matches the application, and the government warning is word-perfect.",
+    "application": {
+      "brandName": "OLD TOM DISTILLERY",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcoholContent": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Old Tom Distillery Co., Bardstown, KY",
+      "countryOfOrigin": ""
+    }
+  },
+  {
+    "id": "title-case-warning",
+    "title": "Title-case government warning",
+    "file": "title-case-warning.png",
+    "expect": "FAIL",
+    "description": "\"Government Warning:\" is not in all capital letters — a real rejection agents catch by eye.",
+    "application": {
+      "brandName": "OLD TOM DISTILLERY",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcoholContent": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Old Tom Distillery Co., Bardstown, KY",
+      "countryOfOrigin": ""
+    }
+  },
+  {
+    "id": "missing-warning",
+    "title": "Missing government warning",
+    "file": "missing-warning.png",
+    "expect": "FAIL",
+    "description": "The mandatory health warning statement is absent from the label.",
+    "application": {
+      "brandName": "OLD TOM DISTILLERY",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcoholContent": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Old Tom Distillery Co., Bardstown, KY",
+      "countryOfOrigin": ""
+    }
+  },
+  {
+    "id": "reworded-warning",
+    "title": "Reworded government warning",
+    "file": "reworded-warning.png",
+    "expect": "FAIL",
+    "description": "The warning is present and looks official, but the wording deviates from the statutory text.",
+    "application": {
+      "brandName": "OLD TOM DISTILLERY",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcoholContent": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Old Tom Distillery Co., Bardstown, KY",
+      "countryOfOrigin": ""
+    }
+  },
+  {
+    "id": "wrong-abv",
+    "title": "Wrong alcohol content",
+    "file": "wrong-abv.png",
+    "expect": "FAIL",
+    "description": "The application says 45% ABV but the label reads 40% — a classic data-entry mismatch.",
+    "application": {
+      "brandName": "OLD TOM DISTILLERY",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcoholContent": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Old Tom Distillery Co., Bardstown, KY",
+      "countryOfOrigin": ""
+    }
+  },
+  {
+    "id": "stones-throw",
+    "title": "STONE'S THROW vs Stone's Throw",
+    "file": "stones-throw.png",
+    "expect": "PASS",
+    "description": "The label shouts the brand in capitals while the application uses title case — same brand, so it should pass with a note, not a rejection.",
+    "application": {
+      "brandName": "Stone's Throw",
+      "classType": "Straight Rye Whiskey",
+      "alcoholContent": "50% Alc./Vol. (100 Proof)",
+      "netContents": "750 mL",
+      "producer": "Stone's Throw Spirits, Hudson, NY",
+      "countryOfOrigin": ""
+    }
+  },
+  {
+    "id": "chateau-import",
+    "title": "Imported wine — compliant",
+    "file": "chateau-import.png",
+    "expect": "PASS",
+    "description": "A French wine with country of origin declared; net contents written as 750ML.",
+    "application": {
+      "brandName": "Château Belmont",
+      "classType": "Red Bordeaux Wine",
+      "alcoholContent": "13.5% Alc./Vol.",
+      "netContents": "750 mL",
+      "producer": "Imported by Belmont Imports LLC, New York, NY",
+      "countryOfOrigin": "Product of France"
+    }
+  },
+  {
+    "id": "bad-photo",
+    "title": "Poorly photographed label",
+    "file": "bad-photo.png",
+    "expect": "PASS",
+    "description": "The compliant Old Tom label, but photographed at an angle with blur and dim lighting — the tool should still read it, or honestly say it needs a human eye.",
+    "application": {
+      "brandName": "OLD TOM DISTILLERY",
+      "classType": "Kentucky Straight Bourbon Whiskey",
+      "alcoholContent": "45% Alc./Vol. (90 Proof)",
+      "netContents": "750 mL",
+      "producer": "Old Tom Distillery Co., Bardstown, KY",
+      "countryOfOrigin": ""
+    }
+  }
+]
